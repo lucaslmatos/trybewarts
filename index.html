@@ -127,15 +127,18 @@
       <textarea name="" id="" cols="30" rows="10" maxlength="500" placeholder="Deixe seu comentário"></textarea>
 
       <div class="checkbox-agreement">
-        <input id="agreement" type="checkbox">
-        <label id="label-infos" for="">Você concorda com o uso das informações acima?</label>
+        <input required id="agreement" type="checkbox" name="submit">
+        <label id="label-infos" for="agreement">Você concorda com o uso das informações acima?</label>
       </div>
-      <button type="submit" id="submit-btn">Enviar</button>
+      <button name="submit" type="submit" id="submit-btn" disabled>Enviar</button>
     </form>
     <section class="logoForms">
       <img src="images/trybewarts-colored.svg" id="trybewarts-forms-logo" alt="Logotipo Trybewarts colorido completo" />
     </section>
   </main>
+  <footer>
+    <p>Direitos reservados à Trybewarts©</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 
