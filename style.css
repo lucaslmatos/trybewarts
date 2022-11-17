@@ -28,6 +28,10 @@
   flex-direction: column;
 }
 
+.name {
+  display: flex;
+}
+
 main {
   display: flex;
   justify-content: space-between;
