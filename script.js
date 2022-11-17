@@ -27,3 +27,10 @@ function countNumber() {
 }
 
 textArea.addEventListener('keyup', countNumber);
+
+const form = document.getElementById('evaluation-form');
+function showInfos() {
+  form.style.display = 'none';
+}
+
+botaoSubmit.addEventListener('click', showInfos);
