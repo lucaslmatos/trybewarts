@@ -40,3 +40,19 @@ main {
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+.input-radio {
+  display: flex;
+}
+
+.input-checkbox {
+  display: flex;
+}
+
+.radio-rate-content {
+  display: flex;
+}
+
+.radio-rate {
+  display: flex;
+}
