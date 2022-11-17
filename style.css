@@ -16,3 +16,8 @@
 .trybewarts-header-logo {
   width: 50px;
 }
+
+.header h1 {
+  justify-self: center;
+  align-self: center;
+}
