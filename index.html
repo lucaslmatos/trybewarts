@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trybewarts</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Esse é um comentário -->
     <header class="header">
-        <img src="images/trybewarts-header-logo.svg" class="trybewarts-header-logo"  alt="Logotipo Trybewarts">
-        <h1 id="trybewarts-header-title">Trybewarts</h1>
-        <form class="trybewarts-login">
-            <input type="email" name="email" placeholder="Email" id="email">
-            <input type="password" name="password" placeholder="Senha" id="senha">
-            <button id="botaoEntrar">Entrar</button>
-        </form>
+      <img
+        src="images/trybewarts-header-logo.svg"
+        class="trybewarts-header-logo"
+        alt="Logotipo Trybewarts"
+      />
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
+      <form class="trybewarts-login">
+        <input type="email" name="email" placeholder="Email" id="email" />
+        <input type="password" name="password" placeholder="Senha" id="senha" />
+        <button id="botaoEntrar">Entrar</button>
+      </form>
     </header>
     <main>
-        <form id="evaluation-form">
-            <div class="name">
-                <input type="text" name="nome" placeholder="Nome" id="input-name">
-                <input type="text" name="sobrenome" placeholder="Sobrenome" id="input-lastname">
-            </div>
-            <div class="name">
-            <input type="email" name="email" placeholder="Email" id="input-email">
-            <select name="" id="house">
-                <option id="gitnoria-house" value="Gitnória">Gitnória</option>
-                <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
-                <option id="corvinode-house" value="Corvinode">Corvinode</option>
-                <option id="pytherina-house" value="Pytherina">Pytherina</option>
-            </select>
+      <form id="evaluation-form">
+        <div class="name">
+          <input type="text" name="nome" placeholder="Nome" id="input-name" />
+          <input
+            type="text"
+            name="sobrenome"
+            placeholder="Sobrenome"
+            id="input-lastname"
+          />
+        </div>
+        <div class="name">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="input-email"
+          />
+          <select name="" id="house">
+            <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+            <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+            <option id="corvinode-house" value="Corvinode">Corvinode</option>
+            <option id="pytherina-house" value="Pytherina">Pytherina</option>
+          </select>
         </div>
         <label for="" id="label-family">Qual sua família?</label>
-        <input type="radio" name="family" value="Frontend">
-        <input type="radio" name="family" value="Backend">
-        <input type="radio" name="family" value="FullStack">
-        </form>
-        <section class="logoForms">
-            <img src="images/trybewarts-colored.svg" id="trybewarts-forms-logo"  alt="Logotipo Trybewarts colorido completo">
-        </section>
+
+        <div class="input-radio">
+          <input type="radio" name="family" value="Frontend" />
+          <label for="Frontend">Frontend</label>
+        </div>
+
+        <div class="input-radio">
+          <input type="radio" name="family" value="Backend" />
+          <label for="family">Backend</label>
+        </div>
+
+        <div class="input-radio">
+          <input type="radio" name="family" value="FullStack" />
+          <label for="family">FullStack</label>
+       </div>
+      </form>
+      <section class="logoForms">
+        <img
+          src="images/trybewarts-colored.svg"
+          id="trybewarts-forms-logo"
+          alt="Logotipo Trybewarts colorido completo"
+        />
+      </section>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
