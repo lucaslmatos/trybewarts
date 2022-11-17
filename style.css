@@ -28,6 +28,14 @@
   flex-direction: column;
 }
 
+#form-data {
+  order: 1;
+}
+
+.logoForms {
+  order: 2;
+}
+
 .name {
   display: flex;
 }
