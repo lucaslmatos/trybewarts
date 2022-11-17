@@ -29,10 +29,8 @@ function countNumber() {
 textArea.addEventListener('keyup', countNumber);
 const main = document.getElementsByTagName('main')[0];
 
-function createInfos(name, email, house, family, subjects, valuation, obs) {
-
-  const arrayInfos = [`Nome: ${name}`, `Email: ${email}`, `Casa: ${house}`,
-  `Família: ${family}`, `Matérias: ${subjects}`, `Avaliação: ${valuation}`, `Observações: ${obs}`];
+function createInfos1(name, emailI, house, family) {
+  const arrayInfos = [`Nome: ${name}`, `Email: ${emailI}`, `Casa: ${house}`, `Família: ${family}`];
   const createDiv = document.createElement('div');
   createDiv.id = 'form-data';
   main.appendChild(createDiv);
@@ -43,20 +41,20 @@ function createInfos(name, email, house, family, subjects, valuation, obs) {
   }
 }
 
-function showInfos() {
-  botaoSubmit.remove();
-  const form = document.getElementById('evaluation-form');
-  const userName = `${document.getElementById('input-name').value} ${document.getElementById('input-lastname').value}`;
-  const userHouse = document.getElementById('house').value;
-  const userEmail = document.getElementById('input-email').value;
-  let userFamily = document.querySelector('input[name="family"]:checked');
-  if (userFamily === null) {
-    userFamily = 'Vazio!';
-  } else {
-    userFamily = userFamily.value;
+function createInfos2(subjects, valuation, obs) {
+  const arrayInfos = [`Matérias: ${subjects}`, `Avaliação: ${valuation}`, `Observações: ${obs}`];
+  const createNewP = document.getElementById('form-data');
+  for (let i = 0; i < arrayInfos.length; i += 1) {
+    const createP = document.createElement('p');
+    createP.innerText = arrayInfos[i];
+    createNewP.appendChild(createP);
   }
+}
+
+function showInfosC() {
+  const form = document.getElementById('evaluation-form');
   const userSubjects = document.querySelectorAll('.subject:checked');
-  let arraySubjects = [];
+  const arraySubjects = [];
   for (let i = 0; i < userSubjects.length; i += 1) {
     arraySubjects.push(userSubjects[i].value);
   }
@@ -67,14 +65,25 @@ function showInfos() {
   } else {
     userValuation = userValuation.value;
   }
-
   const userObs = document.getElementById('textarea').value;
-
-  createInfos(userName, userEmail, userHouse, userFamily, subjects, userValuation, userObs);
+  createInfos2(subjects, userValuation, userObs);
   form.style.display = 'none';
-  if (form.style.display = 'none') {
-    botaoSubmit.removeAttribute('disabled');
+}
+
+function showInfos() {
+  botaoSubmit.remove();
+  const userName = `${document.getElementById('input-name').value} 
+  ${document.getElementById('input-lastname').value}`;
+  const userHouse = document.getElementById('house').value;
+  const userEmail = document.getElementById('input-email').value;
+  let userFamily = document.querySelector('input[name="family"]:checked');
+  if (userFamily === null) {
+    userFamily = 'Vazio!';
+  } else {
+    userFamily = userFamily.value;
   }
+  createInfos1(userName, userEmail, userHouse, userFamily);
+  showInfosC();
 }
 
 botaoSubmit.addEventListener('click', showInfos);
