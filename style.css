@@ -21,3 +21,12 @@
   justify-self: center;
   align-self: center;
 }
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+}
+
+main {
+  display: flex;
+}
